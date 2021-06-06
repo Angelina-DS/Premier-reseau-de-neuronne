@@ -1,4 +1,6 @@
 from keras.datasets import mnist
+from keras import layers
+from keras import models
 import matplotlib.pyplot as plt #Pour afficher un élément de mnist
 from numpy.core.fromnumeric import argmax
 import tensorflow as tf
@@ -53,11 +55,12 @@ print(predictions[:10]) #On affiche les 10 1ères prédictions du modèle
 (train_images, train_labels), (test_images, test_labels) = mnist.load_data()
 
 #On affiche les 10 1ères images du set pour vérifier qu'elles correspondent bien aux prédictions précédentes
+#Pour passer d'une image à l'autre, cliquer sur la croix rouge
 for i in range(10):
     plt.imshow(test_images[i])
     plt.show()
 
-#
+#Ce qui suit ne s'affiche qu'une fois avoir fermé les 10 images des 10 1ère prédictions précédentes
 for i in range(500):
     if test_labels[i] != predictions[i]:
         print('Label : ', test_labels[i])
