@@ -4,8 +4,6 @@ from keras import models
 import matplotlib.pyplot as plt #Pour afficher un élément de mnist
 from numpy.core.fromnumeric import argmax
 import tensorflow as tf
-from keras import layers
-from keras import models
 
 #Import des données, training set et test set
 (train_images, train_labels), (test_images, test_labels) = mnist.load_data()
